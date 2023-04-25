@@ -6,18 +6,18 @@ dept_name VARCHAR
 dept_emp
 -
 dept_emp_id SERIAL PK
-emp_no VARCHAR FK - employees.emp_no
+emp_no INTEGER FK - employees.emp_no
 dept_no VARCHAR FK >- departments.dept_no
 
 dept_manager
 -
 manager_id SERIAL PK
 dept_no VARCHAR FK >- departments.dept_no
-emp_no VARCHAR FK - employees.emp_no
+emp_no INTEGER FK - employees.emp_no
 
 employees
 -
-emp_no VARCHAR PK
+emp_no INTEGER PK
 emp_title_id VARCHAR FK >- titles.title_id
 birth_date DATE
 first_name VARCHAR
@@ -28,7 +28,7 @@ hire_date DATE
 salaries
 -
 salary_id SERIAL PK
-emp_no VARCHAR FK - employees.emp_no
+emp_no INTEGER FK - employees.emp_no
 salary INTEGER
 
 titles
